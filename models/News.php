@@ -10,7 +10,7 @@ namespace App\Models;
 use App\Classes\AbstractModel;
 
 /**
- * Class NewsModel
+ * Class News
  * @property $id
  * @property $title
  * @property $text
@@ -18,6 +18,6 @@ use App\Classes\AbstractModel;
  */
 class News extends AbstractModel {
 
-    protected static $table = 'news5';
+    protected static $table = 'news';
 
 }
