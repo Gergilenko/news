@@ -9,10 +9,12 @@
 <div id="container">
     <h1>Ошибка.</h1>
     <br>
-    <div class='block'>
-        <div class='mhead'>Код ошибки: <b><?php echo $this->items['code']; ?></b></div>
-        <p><?php echo $this->items['message']; ?></p>
-        <p><?php echo $this->items['file']; ?></p>
+    <div class="center">
+        <div class='main'>
+            <div class='mhead'>Код ошибки: <b><?php echo $this->items['code']; ?></b></div>
+            <p><?php echo $this->items['message']; ?></p>
+            <p><?php echo $this->items['file']; ?></p>
+        </div>
     </div>
 </div>
 </body>

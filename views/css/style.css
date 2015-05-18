@@ -1,35 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background: url("../img/whitey.png") repeat;
+
 }
 
 #container {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 824px;
+    margin: 0 auto;
+    color: #636363;
 }
 
-h1, p, form {
-    text-align: center;
+header {
+    box-shadow: 4px 5px 6px grey;
+    margin: 10px 10px 0 10px;
+    border: 1px solid grey;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(180deg, #fff, #e6e6e6);
 }
-table {
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px;
+
+
+header h1,
+h1 a{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #2a00b9, 0 0 5px #e6e6e6;
+    margin: 20px 30px;
+    width: auto;
+    text-decoration: none;
+}
+
+#login {
+    float: right;
+    margin-right: 8px;
+    color: white;
+    text-shadow: 0px 0px 3px black, 5px 5px 8px black;
+}
+
+#login input[type="text"], #login input[type="password"] {
+    border: 1px solid #9c9c9c;
+    box-shadow: 4px 5px 6px grey;
+    border-radius: 5px;
+    height: 18px;
+    padding: 0 3px;
+    margin-top: -1px;
+    width: 88px;
+}
+
+#login input[type="submit"] {
+    border-radius: 5px;
+    box-shadow: 4px 5px 6px grey;
+}
+
+#content {
+    margin: 35px 10px;
+}
+
+#left {
+    float: left;
+}
+#left ul {
+    list-style: none;
+    padding: 5px 15px;
+}
+
+#left a {
+    color: #636363;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+#left a:hover {
+    text-decoration: underline;
+    text-shadow: 4px 0px 10px grey;
 }
 
 .block {
-    background-color: white;
     box-shadow: 4px 5px 6px grey;
-    margin-top: 20px;
-    max-width: 640px;
+    margin-bottom: 20px;
+    width: 180px;
     border: 1px solid grey;
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #fff, #e6e6e6);
+    overflow: hidden;
 }
 
 .block p {
     text-align: left;
     padding: 0 15px;
 }
+
+.head {
+    height: 20px;
+    background: linear-gradient(#81C0FF 51%, #5a86b4 100%);
+    border-bottom: 1px solid #2a00b9;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 16pt;
+    padding: 2px 0 7px 0;
+    margin-bottom: 3px;
+}
+
+#center {
+    width: auto;
+    margin: 0 0 0 200px;
+}
+
+.main {
+    background: white;
+    color: #636363;
+    box-shadow: 4px 5px 6px grey;
+    margin-bottom: 20px;
+    max-width: 640px;
+    border: 1px solid grey;
+    border-radius: 6px 6px 0 0;
+}
+
+.main p {
+    margin: 5px 0;
+    padding: 10px 15px 10px;
+    background: white;
+
+}
+
+.main a {
+    color: #636363;
+
+}
+
+.mhead {
+    border-bottom: 1px solid grey;
+    border-radius: 6px 6px 0 0;
+    padding: 5px 10px;
+    background: #f2f2f2;
+}
+
+#adm_table{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+#adm_table tr {
+    border: 1px solid grey;
+    margin: 0;
+    padding: 0;
+}
+#adm_table td {
+    margin: 0;
+    padding: 5px;
+}
+
+.tbl_title {
+    width: 100%;
+    text-align: left;
+}
+#tbl_date {
+    min-width: 90px;
+}
+#tbl_edit {
+    min-width: 130px;
+}
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px;
+}
+
 
 .mhead {
     border-bottom: 1px solid grey;
@@ -51,6 +194,20 @@ table {
     float: right;
     margin: 0 10px;
 }
+
+.topic, .posted {
+    font-style: italic;
+    color: grey;
+}
+.posted {
+    float: right;
+}
+
 textarea, input[type="text"] {
-    width: 100%;
+    width: 99%;
+}
+
+.sel_topic, .sel_topic select {
+    text-align: left;
+    min-width: 150px;
 }

@@ -16,7 +16,7 @@ require_once __DIR__ . '/config.php';
 
 
 $ctrl = isset($_GET['ctrl']) ? ucfirst($_GET['ctrl']) : 'News';
-$act = isset($_GET['act']) ? ucfirst($_GET['act']) : 'All';
+$act = isset($_GET['act']) ? ucfirst($_GET['act']) : 'Index';
 
 
 $ctrlClassName = 'App\\Controllers\\' . $ctrl;

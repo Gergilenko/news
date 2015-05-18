@@ -31,12 +31,19 @@ abstract class AbstractModel {
         return isset($this->data[$attr]);
     }
 
+    public function load(array $data) {
+        foreach($data as $key => $value) {
+            $this->data[$key] = $value;
+        }
+    }
+
     public static function findAll() {
         $db = new Db;
         $sql = 'SELECT * FROM ' . static::$table;
         $db->setClassName(get_called_class());
         return $db->query($sql);
     }
+
 
     public static function findOneByPk($id) {
         $db = new Db;

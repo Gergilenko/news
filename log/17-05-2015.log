@@ -1,0 +1,5 @@
+17-05-2015 13:52:12	 Caught Exception: 42S02 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'portal.news5' doesn't exist | D:\OpenServer\domains\news.local\classes\Db.php
+17-05-2015 18:54:50	 Caught Exception: 404 | ActionEdit: Страница не найдена по ID: 30 | D:\OpenServer\domains\news.local\controllers\Admin.php
+17-05-2015 18:55:23	 Caught Exception: 404 | ActionEdit: Страница не найдена по ID: 30 | D:\OpenServer\domains\news.local\controllers\Admin.php
+17-05-2015 18:55:36	 Caught Exception: 404 | ActionEdit: Страница не найдена по ID: 8 | D:\OpenServer\domains\news.local\controllers\Admin.php
+17-05-2015 19:11:33	 Caught Exception: 42S22 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'topic' in 'field list' | D:\OpenServer\domains\news.local\classes\Db.php

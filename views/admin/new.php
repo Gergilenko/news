@@ -27,14 +27,18 @@
         </div>
         <div id="center">
             <div class="main">
-                <div class="mhead"><h2><?php echo $item->title; ?></h2></div>
-                <p><?php echo $item->text; ?></p>
-                <p><a href="<?php $this->url('news/index'); ?>">Все новости</a></p>
-                <div class="mfoot">
-                    <span class="topic">Тема: <?php echo $item->topic; ?></span>
-                    <span class="posted">Опубликовано: <?php echo $item->add_date; ?></span>
-                </div>
-
+                <div class="mhead"><h2>Добавить новость</h2></div>
+                    <form action="<?php $this->url('admin/add'); ?>" method="post">
+                    <p class="sel_topic"><select  name="topic_id" required>
+                            <option></option>
+                            <?php foreach ($topics as $item): ?>
+                            <option value="<?php echo $item->id; ?>"><?php echo $item->title; ?></option>
+                            <?php endforeach; ?>
+                        </select></p>
+                    <p><input type="text" placeholder="Заголовок" name="title" required></p>
+                    <p><textarea name="text" placeholder="Текст новости..." rows="10" wrap="soft" required></textarea></p>
+                    <p><input type="submit" value="сохранить"></p>
+                    </form>
             </div>
         </div>
     </div>

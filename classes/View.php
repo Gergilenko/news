@@ -32,6 +32,10 @@ class View {
         include __DIR__ . '/../views/' . $template;
     }
 
+    public static function redirect($url) {
+        header('Location: ' . $url);
+    }
+
     public function url($str) {
         echo SITE_ROOT . $str;
     }

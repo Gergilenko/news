@@ -31,6 +31,27 @@ class Db {
         return $sth->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
+    public function queryAssoc($sql, $params = []) {
+
+    $sth = $this->dbh->prepare($sql);
+    $sth->execute($params);
+    return $sth->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function queryRow($sql, $params = []) {
+
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute($params);
+        return $sth->fetchObject($this->className);
+    }
+
+    public function queryRowAssoc($sql, $params = []) {
+
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute($params);
+        return $sth->fetch();
+    }
+
     public function exec($sql, $params = []) {
 
         $sth = $this->dbh->prepare($sql);

@@ -29,7 +29,7 @@
             <div class="main">
                 <div class="mhead"><h2><?php echo $item->title; ?></h2></div>
                 <p><?php echo $item->text; ?></p>
-                <p><a href="<?php $this->url('news/index'); ?>">Все новости</a></p>
+                <p><a href="<?php $this->url('admin/index'); ?>">Все новости</a></p>
                 <div class="mfoot">
                     <span class="topic">Тема: <?php echo $item->topic; ?></span>
                     <span class="posted">Опубликовано: <?php echo $item->add_date; ?></span>
