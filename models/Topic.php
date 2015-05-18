@@ -6,7 +6,7 @@
  * Time: 13:54
  */
 
-namespace App\models;
+namespace App\Models;
 
 use App\Classes\AbstractModel;
 
