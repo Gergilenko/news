@@ -211,3 +211,33 @@ textarea, input[type="text"] {
     text-align: left;
     min-width: 150px;
 }
+
+#pages {
+    box-shadow: 4px 5px 6px grey;
+    background-color: #f2f2f2;
+    border: 1px solid grey;
+    border-radius: 0 0 6px 6px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#pages a {
+    color: #636363;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+#pages a:hover {
+    color: #ffffff;
+    background-color: grey;
+    border: 1px solid grey;
+    padding: 0 4px;
+    text-decoration: none;
+}
+
+#pages span {
+    color: #ffffff;
+    background-color: grey;
+    border: 1px solid grey;
+    padding: 0 5px;
+}

@@ -4,6 +4,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z]+)\/?$ index.php?ctrl=$1
 RewriteRule ^([a-zA-Z]+)\/([a-zA-Z]+)\/?$ index.php?ctrl=$1&act=$2
-RewriteRule ^([a-zA-Z]+)\/index\/([1-9][0-9]*)\/?$ index.php?ctrl=$1&act=index&page=$2
-RewriteRule ^([a-zA-Z]+)\/([a-zA-Z]+)\/([1-9][0-9]*)\/?$ index.php?ctrl=$1&act=$2&id=$3 [QSA]
+RewriteRule ^([a-zA-Z]+)\/([a-zA-Z]+)\/([1-9][0-9]*)\/?$ index.php?ctrl=$1&act=$2&id=$3
+RewriteRule ^([a-zA-Z]+)\/(index|topic)\/([1-9][0-9]*)\/?$ index.php?ctrl=$1&act=$2&page=$3
+RewriteRule ^([a-zA-Z]+)\/date\/([0-9]+-?[0-9]*)\/([1-9][0-9]*)\/?$ index.php?ctrl=$1&act=date&filter=$2&page=$3
 #RewriteRule ^(.*)$ views/error/404.php
+
+# /news/index/page/1
+# /news/date/2015-05/page/2
+# /news/topic/3/page/2

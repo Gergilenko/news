@@ -27,7 +27,9 @@
                     </div>
                 </div>
             <?php endforeach; ?>
-
+            <div id='pages'>
+                <?php echo App\Classes\Pager::getLinks($_SERVER['REQUEST_URI']); ?>
+            </div>
         </div>
     </div>
 </div>

@@ -37,7 +37,7 @@ abstract class AbstractModel {
         }
     }
 
-    public static function findAll() {
+    public static function selectAll() {
         $db = new Db;
         $sql = 'SELECT * FROM ' . static::$table;
         $db->setClassName(get_called_class());
@@ -45,7 +45,7 @@ abstract class AbstractModel {
     }
 
 
-    public static function findOneByPk($id) {
+    public static function selectOneByPk($id) {
         $db = new Db;
         $sql = 'SELECT * FROM ' . static::$table . ' WHERE id=:id';
 
@@ -57,8 +57,19 @@ abstract class AbstractModel {
         return false;
     }
 
-    public static function findByColumn($column, $value) {
+    public static function selectByColumn($column, $value) {
         $sql = 'SELECT * FROM ' . static::$table . ' WHERE ' .$column. '=:value';
+        $db = new Db;
+        $db->setClassName(get_called_class());
+        $result = $db->query($sql, [':value' => $value]);
+        if (!empty($result)) {
+            return $result;
+        }
+        return false;
+    }
+
+    public static function searchByColumn($column, $value) {
+        $sql = "SELECT * FROM " . static::$table . " WHERE " .$column. " LIKE ':value%'";
         $db = new Db;
         $db->setClassName(get_called_class());
         $result = $db->query($sql, [':value' => $value]);

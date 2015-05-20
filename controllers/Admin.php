@@ -17,7 +17,7 @@ class Admin {
 
     public function actionIndex() {
         $view = new View();
-        $view->items = News::findAll();
+        $view->items = News::selectAll();
         $view->display('admin/index.php');
     }
 
@@ -26,7 +26,7 @@ class Admin {
             View::redirect('/admin/index');
         }
         $view = new View;
-        $view->item = News::findOneByPk($_GET['id']);
+        $view->item = News::selectOneByPk($_GET['id']);
         if (empty($view->item)) {
             throw new \Exception('ActionOne: Страница не найдена по ID: ' . $_GET['id'], 404);
         }
@@ -36,7 +36,7 @@ class Admin {
     public function actionNew() {
 
         $view = new View;
-        $view->topics = Topic::findAll();
+        $view->topics = Topic::selectAll();
         $view->display('admin/new.php');
     }
 
@@ -59,8 +59,8 @@ class Admin {
             View::redirect('/admin/index');
         }
         $view = new View;
-        $view->news = News::findOneByPk($_GET['id']);
-        $view->topics = Topic::findAll();
+        $view->news = News::selectOneByPk($_GET['id']);
+        $view->topics = Topic::selectAll();
 
         //var_dump($view);die;
         if (empty($view->news)) {

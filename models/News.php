@@ -22,7 +22,7 @@ class News extends AbstractModel {
 
     protected static $table = 'news';
 
-    public static function findAll() {
+    public static function selectAll() {
         $db = new Db;
         $sql = 'SELECT n.id, n.title, n.text, n.add_date, t.title as topic
                                           FROM news n JOIN topics t ON n.topic_id = t.id ORDER BY n.add_date DESC';
@@ -30,7 +30,7 @@ class News extends AbstractModel {
         return $db->query($sql);
     }
 
-    public static function findOneByPk($id) {
+    public static function selectOneByPk($id) {
         $db = new Db;
         $sql = 'SELECT n.id, n.title, n.text, n.add_date, t.title as topic
                                           FROM news n JOIN topics t ON n.topic_id = t.id WHERE n.id=:id';

@@ -8,6 +8,7 @@
 
 namespace App\Classes;
 
+
 class View {
 
 
